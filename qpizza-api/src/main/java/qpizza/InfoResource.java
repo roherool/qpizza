@@ -13,7 +13,7 @@ public class InfoResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Map<String,String> getInfo() {
-        var info = Map.of(k1:"info", v1:"Olá Pizza");
+        var info = Map.of("info", "Olá Pizza");
         return info;
     }
 }
