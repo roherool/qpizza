@@ -20,8 +20,8 @@
 
         <vaadin.version>24.3.3</vaadin.version>
 
-        <quarkus.platform.version>3.3.0</quarkus.platform.version>
-        <surefire-plugin.version>3.0.0</surefire-plugin.version>
+        <quarkus.platform.version>3.6.8</quarkus.platform.version>
+        <surefire-plugin.version>3.1.2</surefire-plugin.version>
 
     </properties>
 
@@ -63,6 +63,18 @@
         </dependency>
         -->
 
+        <!-- Quarkus always pulls in slf4j-jboss-logmanager into target/lib; don't use slf4j-simple -->
+        <dependency>
+            <groupId>org.jboss.slf4j</groupId>
+            <artifactId>slf4j-jboss-logmanager</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>qpizza</groupId>
+            <artifactId>qpizza-core</artifactId>
+        <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
